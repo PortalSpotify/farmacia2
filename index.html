@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmáciaSaúde - Sua Farmácia Online | Orçamento via WhatsApp</title>
+    <meta name="description" content="Solicite seu orçamento gratuito via WhatsApp. Medicamentos, vitaminas, cosméticos e produtos de saúde com entrega rápida e preços especiais.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Botão Flutuante WhatsApp -->
+    <div class="floating-whatsapp" onclick="openWhatsApp('Olá! Gostaria de solicitar um orçamento.')">
+        <i class="fab fa-whatsapp"></i>
+        <span class="floating-text">Orçamento</span>
+        <div class="pulse-ring"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-mortar-pestle"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>FarmáciaSaúde</h1>
+                        <p>Sua farmácia de confiança</p>
+                    </div>
+                </div>
+                <button class="btn-whatsapp-header" onclick="openWhatsApp('Olá! Gostaria de solicitar um orçamento.')">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Solicitar Orçamento</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Farmácia Licenciada</span>
+                </div>
+                <h2>Sua saúde em primeiro lugar</h2>
+                <p>Solicite seu <strong>orçamento gratuito</strong> via WhatsApp e encontre os melhores medicamentos, cosméticos e produtos de saúde com atendimento personalizado</p>
+                <div class="hero-cta-group">
+                    <button class="btn-hero-primary" onclick="openWhatsApp('Olá! Gostaria de solicitar um orçamento gratuito.')">
+                        <i class="fab fa-whatsapp"></i>
+                        Solicitar Orçamento Gratuito
+                        <span class="btn-badge">Resposta em 5min</span>
+                    </button>
+                    <button class="btn-hero-secondary" onclick="scrollToProducts()">
+                        <i class="fas fa-pills"></i>
+                        Ver Produtos
+                    </button>
+                </div>
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Resposta Rápida</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-truck"></i>
+                        <span>Entrega em 2h</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-certificate"></i>
+                        <span>Produtos Originais</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features">
+        <div class="container">
+            <h3>Por que escolher nossa farmácia?</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-truck feature-icon"></i>
+                    </div>
+                    <h4>Entrega Rápida</h4>
+                    <p>Receba seus medicamentos em até 2 horas na região metropolitana</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-shield-alt feature-icon"></i>
+                    </div>
+                    <h4>Produtos Originais</h4>
+                    <p>Garantia de autenticidade em todos os produtos com nota fiscal</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <i class="fas fa-user-md feature-icon"></i>
+                    </div>
+                    <h4>Atendimento Farmacêutico</h4>
+                    <p>Farmacêuticos qualificados para orientação personalizada</p>
+                </div>
+                <div class="feature-card highlight">
+                    <div class="feature-icon-wrapper">
+                        <i class="fab fa-whatsapp feature-icon"></i>
+                    </div>
+                    <h4>Orçamento via WhatsApp</h4>
+                    <p>Solicite orçamentos e tire dúvidas diretamente pelo WhatsApp</p>
+                    <button class="btn-feature" onclick="openWhatsApp('Olá! Gostaria de saber mais sobre o atendimento via WhatsApp.')">
+                        Falar Agora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <h3>Nossos Produtos</h3>
+            <p class="products-subtitle">Solicite orçamento pelo WhatsApp e consulte disponibilidade e preços especiais</p>
+            <div class="products-grid">
+                <div class="product-card" onclick="openWhatsApp('Olá! Preciso de um orçamento para medicamentos. Podem verificar disponibilidade e preços?')">
+                    <div class="product-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h4>Medicamentos</h4>
+                    <p>Remédios e medicamentos em geral com receita médica</p>
+                    <button class="btn-product">
+                        <i class="fab fa-whatsapp"></i>
+                        Solicitar Orçamento
+                    </button>
+                    <div class="product-badge">Orçamento Grátis</div>
+                </div>
+                <div class="product-card" onclick="openWhatsApp('Olá! Gostaria de um orçamento para vitaminas e suplementos. Podem me ajudar?')">
+                    <div class="product-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h4>Vitaminas</h4>
+                    <p>Suplementos vitamínicos e minerais</p>
+                    <button class="btn-product">
+                        <i class="fab fa-whatsapp"></i>
+                        Solicitar Orçamento
+                    </button>
+                    <div class="product-badge">Orçamento Grátis</div>
+                </div>
+                <div class="product-card" onclick="openWhatsApp('Olá! Preciso de um orçamento para produtos de beleza e cosméticos.')">
+                    <div class="product-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h4>Cosméticos</h4>
+                    <p>Produtos de beleza e cuidados com a pele</p>
+                    <button class="btn-product">
+                        <i class="fab fa-whatsapp"></i>
+                        Solicitar Orçamento
+                    </button>
+                    <div class="product-badge">Orçamento Grátis</div>
+                </div>
+                <div class="product-card" onclick="openWhatsApp('Olá! Gostaria de um orçamento para produtos de higiene pessoal.')">
+                    <div class="product-icon">
+                        <i class="fas fa-pump-soap"></i>
+                    </div>
+                    <h4>Higiene</h4>
+                    <p>Produtos de higiene pessoal e bucal</p>
+                    <button class="btn-product">
+                        <i class="fab fa-whatsapp"></i>
+                        Solicitar Orçamento
+                    </button>
+                    <div class="product-badge">Orçamento Grátis</div>
+                </div>
+                <div class="product-card" onclick="openWhatsApp('Olá! Preciso de um orçamento para produtos infantis e de bebê.')">
+                    <div class="product-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h4>Bebê</h4>
+                    <p>Produtos para bebês e crianças</p>
+                    <button class="btn-product">
+                        <i class="fab fa-whatsapp"></i>
+                        Solicitar Orçamento
+                    </button>
+                    <div class="product-badge">Orçamento Grátis</div>
+                </div>
+                <div class="product-card" onclick="openWhatsApp('Olá! Gostaria de um orçamento para suplementos alimentares.')">
+                    <div class="product-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h4>Suplementos</h4>
+                    <p>Suplementos alimentares e proteínas</p>
+                    <button class="btn-product">
+                        <i class="fab fa-whatsapp"></i>
+                        Solicitar Orçamento
+                    </button>
+                    <div class="product-badge">Orçamento Grátis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+        <div class="container">
+            <h3>Entre em Contato</h3>
+            <div class="contact-grid">
+                <div class="contact-card whatsapp-priority">
+                    <div class="contact-header">
+                        <div class="contact-icon-wrapper">
+                            <i class="fab fa-whatsapp contact-icon"></i>
+                        </div>
+                        <div>
+                            <h4>WhatsApp - Orçamentos</h4>
+                            <p>Solicite orçamentos e tire dúvidas diretamente pelo WhatsApp com resposta em até 5 minutos</p>
+                        </div>
+                    </div>
+                    <button class="btn-contact-primary" onclick="openWhatsApp('Olá! Gostaria de solicitar um orçamento.')">
+                        <i class="fab fa-whatsapp"></i>
+                        Solicitar Orçamento Agora
+                    </button>
+                    <div class="contact-features">
+                        <div class="contact-feature">
+                            <i class="fas fa-clock"></i>
+                            <span>Resposta em 5min</span>
+                        </div>
+                        <div class="contact-feature">
+                            <i class="fas fa-calculator"></i>
+                            <span>Orçamento gratuito</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <div class="contact-icon-wrapper">
+                            <i class="fas fa-info-circle contact-icon"></i>
+                        </div>
+                        <div>
+                            <h4>Outras Informações</h4>
+                            <p>Informações adicionais e outros canais de contato</p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(11) 5196-6608</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>São Paulo, SP</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Seg-Sex: 8h às 18h</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Farmácia licenciada CRF-SP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Precisa de um orçamento?</h3>
+                <p>Nossa equipe farmacêutica está pronta para te atender no WhatsApp com orçamentos personalizados</p>
+                <button class="btn-cta" onclick="openWhatsApp('Olá! Preciso de um orçamento urgente. Podem me atender agora?')">
+                    <i class="fab fa-whatsapp"></i>
+                    Solicitar Orçamento Agora
+                </button>
+                <div class="cta-guarantee">
+                    <i class="fas fa-shield-check"></i>
+                    <span>Resposta garantida em até 5 minutos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-mortar-pestle"></i>
+                    </div>
+                    <span>FarmáciaSaúde</span>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 FarmáciaSaúde. Todos os direitos reservados.</p>
+                    <p>Farmácia licenciada - CRF-SP 12345</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pop-up de Orçamento -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <h4>Precisa de um orçamento rápido?</h4>
+            <p>Fale conosco no WhatsApp e receba seu orçamento personalizado em minutos!</p>
+            <button class="btn-popup" onclick="openWhatsApp('Olá! Vi o site de vocês e preciso de um orçamento urgente. Podem me atender agora?')">
+                <i class="fab fa-whatsapp"></i>
+                Solicitar Orçamento Agora
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
